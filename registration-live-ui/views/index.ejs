@@ -90,7 +90,7 @@ $(document).ready(function() {
 	    function callAjax() {
 				  $.ajax({
 				    type: 'GET',
-						url: 'http://registration-command-sko.192.168.99.100.nip.io/skoregistration/sa/status',
+						url: '<%-routeurl%>/skoregistration/sa/status',
 				    data: $(this).serialize(),
 				    dataType: 'json',
 				    success: function (data) {
@@ -98,7 +98,7 @@ $(document).ready(function() {
 
 				    	$.each(data, function (index, value) {
 				    			console.log(data[index]);
-				    			divdisplay=noticefront+'<B>'+data[index].CANDIDATENAME+'</B> is reserving seat:['+data[index].SEATNAME+'] as row_col: ['+data[index].SEATNO+']';
+				    			divdisplay=noticefront+'<B>'+data[index].candidatename+'</B> is reserving seat:['+data[index].seatname+'] as row_col: ['+data[index].seatno+']';
 							    console.log(divdisplay);
 							    $('#displaydashboard').append(divdisplay);  
 							});

@@ -125,7 +125,7 @@
 		function callStatus() {
 		  $.ajax({
 		  	type: 'GET',
-		  	url: 'http://analytic-listener:8080/analytic/status/class',
+		  	url: '<%= htmlWebpackPlugin.options.routeurl %>/analytic/status/class',
 		  	data: $(this).serialize(),
 		  	dataType: 'json',
 		  	success: function (data) {
@@ -188,7 +188,7 @@
 		function callRow() {
 		  $.ajax({
 		  	type: 'GET',
-		  	url: 'http://analytic-listener:8080/analytic/status/row',
+		  	url: '<%= htmlWebpackPlugin.options.routeurl %>/analytic/status/row',
 		  	data: $(this).serialize(),
 		  	dataType: 'json',
 		  	success: function (data) {
@@ -236,16 +236,17 @@
 		
 		
 		
-    $(function() {
+    //$(function() {
       // matchHeight the contents of each .card-pf and then the .card-pf itself
-      $(".row-cards-pf > [class*='col'] > .card-pf .card-pf-title").matchHeight();
-      $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-body").matchHeight();
-      $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-footer").matchHeight();
-      $(".row-cards-pf > [class*='col'] > .card-pf").matchHeight();
-    });
+      //$(".row-cards-pf > [class*='col'] > .card-pf .card-pf-title").matchHeight();
+      //$(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-body").matchHeight();
+      //$(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-footer").matchHeight();
+      //$(".row-cards-pf > [class*='col'] > .card-pf").matchHeight();
+    //});
   });
 
 </script>
 
   </body>
 </html>
+
