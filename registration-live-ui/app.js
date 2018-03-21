@@ -4,7 +4,8 @@ const htmls = require('ejs')
 const app = express()
 
 app.use(express.static('js'))
-app.set('view engine', 'ejs');
+app.use(express.static('images'))
+app.set('view engine', 'ejs')
  
 
 app.get('/', function (req, res) {
